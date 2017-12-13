@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="components/loader.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo1Si93ChP395UsIQlQff-NYpkayHfEXQ&libraries=geometry"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><script src="js/map.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/footor.css"/>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+	    $(this).tab('show');
+    });
+
+    $(function () {
+        $('#myTab a:last').tab('show');
+    })
+</script>
+
+<body>
+    <div id="map"></div>
+    <!--<button id="mapButton" onclick=location.href="index.html">撮影</button>-->
+
+    <div id="footer">
+    <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+        <div class="row" id="bottomNav">
+            <div class="col-xs-4 text-center"><a href="map.html"><i class="glyphicon glyphicon-map-marker"></i></a></div>
+            <div class="col-xs-4 text-center"><a href="index.html"><i class="glyphicon glyphicon-camera"></i></a></div>
+            <div class="col-xs-4 text-center"><a href="stamp.html"><i class="glyphicon glyphicon-star"></i></a></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

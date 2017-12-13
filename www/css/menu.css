@@ -1,0 +1,87 @@
+#menu ul li {
+  position: absolute;
+  width: 100%;
+}
+ 
+#menu ul li:nth-child(1) {
+  bottom: 295px;
+  right: 148px;
+}
+ 
+#menu ul li:nth-child(2) {
+  bottom: 254px;
+  right: 105px;
+}
+ 
+#menu ul li:nth-child(3) {
+  bottom: 210px;
+  right: 70px;
+}
+ 
+#menu ul li:nth-child(4) {
+  bottom: 161px;
+  right: 40px;
+}
+ 
+#menu ul li:nth-child(5) {
+  bottom: 107px;
+  right: 20px;
+}
+ 
+#menu ul li:nth-child(6) {
+  bottom: 53px;
+  right: 8px;
+}
+ 
+#Photo .icon {
+  background-position: 0 0;
+}
+ 
+#Map .icon {
+  background-position: 0 -50px;
+}
+ 
+#Stamp .icon {
+  background-position: 0 -100px;
+}
+ 
+#openMenu .icon {
+  background-position: 0 -300px;
+}
+ 
+#closeMenu .icon {
+  background-position: 0 -350px;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 390px;
+}
+ 
+#menu ul li {
+  height: 44px;
+  margin: 0;
+  overflow: hidden;
+  padding: 2px;
+  text-align: right;
+}
+ 
+#menu span {
+position: absolute;
+right: 50px;
+}
+ 
+#menu #openMenu .icon,
+#menu #closeMenu .icon {
+  overflow: hidden;
+  text-indent: 999em;
+}
+
+#menu #closeMenu {
+  margin-top: -48px;
+}
