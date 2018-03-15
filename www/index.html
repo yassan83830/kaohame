@@ -9,29 +9,29 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-
-
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <!--<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>-->
 </head>
 <body>
-ujuujujuju
-    <!--<button id="mapButton">マップ</button>-->
     <button type="button" id="mapButton"><i class="glyphicon glyphicon-map-marker"></i></button>
+    <button type="button" id="stampButton"><i class="glyphicon glyphicon-star"></i></button>
     <video id="video"></video>
     <canvas id="dst"></canvas>
     
-    <button id="takeButton" onClick="savePhoto()">保存</button>
-    <!--<button id="takeButton" onClick="savePhoto()><i class="glyphicon glyphicon-map-marker"></i></button>-->
+    <button id="takeButton" onClick="savePhoto()"><i class="glyphicon glyphicon-camera"></i></button> 
     
+    <button type="button" id="cameraSwitch"><a href="front.html"><i class="glyphicon glyphicon-refresh"></i></a></button>
+    
+    
+    
+    <audio id="shutter" preload="auto">
+        <source src="shutter.mp3" type="audio/mp3">
+    </audio>
 </body>
 </html>

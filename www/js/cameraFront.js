@@ -4,7 +4,7 @@
 var canvas;
 var context;
 //画像
-var imgPanelFile = ["./img/takehara.png","./img/panel_2.png"];
+var imgPanelFile = ["./img/takehara2.png","./img/panel_2.png"];
 var imgPanel;
 /*place場所に関する変数
     場所 0:パルディ 1:学校*/
@@ -33,7 +33,7 @@ if(ls_data != 1){
 $(document).ready(function(){
     initVideo();
     //setInterval(getGeolocation, 1000);
-    localStorage.setItem("takeCheck", 1);
+    localStorage.setItem("takeCheck", 0);
     stampListStore = JSON.parse(localStorage.getItem("stampList"));
 
     $("#mapButton").click(function(){
@@ -57,7 +57,7 @@ function initVideo(){
     window.URL = window.URL || window.webkitURL;
     navigator.getUserMedia({
         audio: false, /*音声使用の有無*/
-        video: {facingMode: { exact: "user"}}
+        video: {facingMode: { exact: "environment"}}
     }, function(stream) {
         video.src = URL.createObjectURL(stream);
         initCanvas();
@@ -105,7 +105,8 @@ function savePhoto(){
     var base64 = canvas.toDataURL("image/png");
     var blob = Base64toBlob(base64);
     var fileName = "sample.png";
-    sound();
+    
+    document.getElementById('shutter').play();
     // blobデータをa要素を使ってダウンロード
     saveBlob(blob, fileName);
 }
@@ -123,7 +124,7 @@ function Base64toBlob(base64)
     var mime = tmp[0].split(':')[1].split(';')[0];
     //  1文字ごとにUTF-16コードを表す 0から65535 の整数を取得
     var buf = new Uint8Array(data.length);
-	for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
         buf[i] = data.charCodeAt(i);
     }
     // blobデータを作成
@@ -196,6 +197,3 @@ function getImage(position){
     }
 }
 
-function sound(){
-    document.getElementById('shutter').play();
-}
